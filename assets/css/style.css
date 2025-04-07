@@ -57,6 +57,9 @@ a:hover {
 .btn:hover {
     background: rgba(100, 255, 218, 0.1);
 }
+.menu-toggle {
+    display:flex
+}
 
 /* Header */
 .header {
@@ -302,6 +305,7 @@ header img{
 
 .project-info {
     padding: 20px;
+    display: inline;
 }
 
 .project-info h3 {
@@ -393,7 +397,7 @@ header img{
     }
 
     .menu-toggle {
-        display: block;
+        display: flex;
     }
 
     .about-content {
