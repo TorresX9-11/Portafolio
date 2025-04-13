@@ -1,3 +1,8 @@
+/*
+    Este es el archivo CSS principal del portafolio de Emanuel Torres Troncoso.
+    Contiene las variables de color, la tipografía y los estilos generales de la página web.
+*/
+
 /* Variables de color y tipografía */
 :root {
     --primary-color: #64ffda;
@@ -11,36 +16,54 @@
 }
 
 /* Reset y estilos base */
+/*
+    Establece los estilos base y resetea los estilos por defecto del navegador.
+*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 /* cuerpo de la pagina */
+/*
+    Estilos para el cuerpo de la página.
+*/
 body {
     font-family: var(--font-sans);
     background-color: var(--secondary-color);
     color: var(--text-color);
     line-height: 1.6;
 }
-/* contender de la lista */
+/* contenedor principal */
+/*
+    Estilos para el contenedor principal de la página.
+*/
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
-/*  */
+/* enlaces */
+/*
+    Estilos para los enlaces.
+*/
 a {
     text-decoration: none;
     color: var(--primary-color);
     transition: all 0.3s ease;
 }
 /* estilo unico para los links */
+/*
+    Estilos para los enlaces cuando el cursor está sobre ellos.
+*/
 a:hover {
     color: var(--primary-color);
     opacity: 0.8;
 }
 /* boton "contactame" */
+/*
+    Estilos para el botón "Contáctame".
+*/
 .btn {
     display: inline-block;
     background: transparent;
@@ -60,6 +83,9 @@ a:hover {
 
 
 /* Header */
+/*
+    Estilos para la cabecera de la página.
+*/
 .header {
     position: fixed;
     top: 0;
@@ -123,6 +149,9 @@ header img{
 }
 
 /* Hero section */
+/*
+    Estilos para la sección Hero.
+*/
 .hero {
     height: 100vh;
     display: flex;
@@ -150,6 +179,9 @@ header img{
 }
 
 /* Sections comunes */
+/*
+    Estilos comunes para las secciones.
+*/
 .section {
     padding: 100px 0;
 }
@@ -177,6 +209,9 @@ header img{
 }
 
 /* About section */
+/*
+    Estilos para la sección "Sobre mí".
+*/
 .about-content {
     display: flex;
     gap: 50px;
@@ -230,6 +265,9 @@ header img{
 }
 
 /* Experience section */
+/*
+    Estilos para la sección "Experiencia".
+*/
 .experience-timeline {
     margin-top: 50px;
 }
@@ -260,7 +298,9 @@ header img{
 }
 
 /* Work section */
-
+/*
+    Estilos para la sección "Trabajos".
+*/
 .projects-columns {
     display: flex;
     gap: 30px;
@@ -345,15 +385,12 @@ header img{
     }
 }
 
-.project-card {
-    background-color: var(--dark-color);
-    border-radius: 5px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-}
 /*/////////////////*/
 
 /* Contact section */
+/*
+    Estilos para la sección "Contacto".
+*/
 .contact {
     text-align: center;
 }
@@ -382,6 +419,9 @@ header img{
 }
 
 /* Footer */
+/*
+    Estilos para el pie de página.
+*/
 .footer {
     text-align: center;
     padding: 20px 0;
@@ -390,6 +430,9 @@ header img{
 }
 
 /* Responsive */
+/*
+    Estilos para la adaptación a diferentes tamaños de pantalla.
+*/
 @media (max-width: 700px) {
     .nav-list {
         display: none;
@@ -447,6 +490,9 @@ header img{
 
 }
 /* Efecto de cursor personalizado */
+/*
+    Estilos para el efecto de cursor personalizado.
+*/
 .cursor {
     position: fixed;
     width: 20px;
@@ -481,6 +527,9 @@ header img{
 }
 
 /* Estados interactivos */
+/*
+    Estilos para los estados interactivos del cursor.
+*/
 .hover-cursor-effect {
     transform: translate(-50%, -50%) scale(1.5);
     background-color: var(--primary-color);
@@ -493,16 +542,10 @@ header img{
 }
 
 /* Ocultar cursor nativo */
+/*
+    Oculta el cursor nativo del navegador.
+*/
 html.has-custom-cursor,
 html.has-custom-cursor * {
     cursor: none !important;
 }
-
-  
-  
-  
-  
-  
-  
-  
- 
