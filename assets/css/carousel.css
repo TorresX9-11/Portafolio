@@ -90,6 +90,7 @@
 }
 
 .project-links {
+    position: static;
     display: flex;
     gap: 15px;
     margin-top: 10px;
@@ -164,6 +165,17 @@
         width: 250px;
         height: 350px;
     }
+    .carousel-slide {
+        overflow: visible;
+        height: 100%;
+        max-height: 500px;
+        align-items: center;
+    }
+    .carousel-3d-container {
+        height: 100%;
+        max-height: 550px;
+    }
+    
     
     .project-card:nth-child(1) {
         transform: translate(-50%, -50%) rotateY(0deg) translateZ(300px);
