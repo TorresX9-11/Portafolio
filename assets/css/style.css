@@ -15,55 +15,37 @@
     --font-sans: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', sans-serif;
 }
 
-/* Reset y estilos base */
-/*
-    Establece los estilos base y resetea los estilos por defecto del navegador.
-*/
+/* Reset y estilos base - Resetear estilos por defecto del navegador */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-/* cuerpo de la pagina */
-/*
-    Estilos para el cuerpo de la página.
-*/
+/* Estilos para el cuerpo de la página */
 body {
     font-family: var(--font-sans);
     background-color: var(--secondary-color);
     color: var(--text-color);
     line-height: 1.6;
 }
-/* contenedor principal */
-/*
-    Estilos para el contenedor principal de la página.
-*/
+/* Estilos para el contenedor principal */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
-/* enlaces */
-/*
-    Estilos para los enlaces.
-*/
+/* Estilos para los enlaces */
 a {
     text-decoration: none;
     color: var(--primary-color);
     transition: all 0.3s ease;
 }
-/* estilo unico para los links */
-/*
-    Estilos para los enlaces cuando el cursor está sobre ellos.
-*/
+/* Estilos para los enlaces al pasar el cursor */
 a:hover {
     color: var(--primary-color);
     opacity: 0.8;
 }
-/* boton "contactame" */
-/*
-    Estilos para el botón "Contáctame".
-*/
+/* Estilos para el botón "Contáctame" */
 .btn {
     display: inline-block;
     background: transparent;
@@ -77,15 +59,13 @@ a:hover {
     transition: all 0.3s ease;
 }
 
+/* Estilos para el botón "Contáctame" al pasar el cursor */
 .btn:hover {
     background: rgba(100, 255, 218, 0.1);
 }
 
 
-/* Header */
-/*
-    Estilos para la cabecera de la página.
-*/
+/* Estilos para la cabecera.  Se incluye -webkit-backdrop-filter para compatibilidad con navegadores webkit */
 .header {
     position: fixed;
     top: 0;
@@ -93,44 +73,49 @@ a:hover {
     right: 0;
     background-color: rgba(10, 25, 47, 0.9);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     z-index: 100;
     height: 80px;
     display: flex;
     align-items: center;
 }
-/* Logo */
-header img{
+/* Estilos para el logo */
+header img {
     max-width: 50px;
 }
 
+/* Estilos para la navegación */
 .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    
 }
-/* Lista de links en el contenedor horizontal */
+/* Estilos para la lista de navegación */
 .nav-list {
     display: flex;
     list-style: none;
     gap: 30px;
 }
 
+/* Estilos para los enlaces de navegación */
 .nav-list a {
     color: var(--light-color);
     font-size: 14px;
     font-family: var(--font-mono);
 }
 
+/* Estilos para los enlaces de navegación al pasar el cursor */
 .nav-list a:hover {
     color: var(--primary-color);
 }
 
+/* Estilos para los elementos de lista de navegación */
 .nav-list li {
     position: relative;
 }
 
+/* Estilos para el marcador de lista de navegación */
 .nav-list li::before {
     content: '01.';
     margin-right: 5px;
@@ -139,6 +124,7 @@ header img{
     font-size: 12px;
 }
 
+/* Estilos para el botón de menú */
 .menu-toggle {
     display: none;
     background: none;
@@ -147,11 +133,31 @@ header img{
     font-size: 24px;
     cursor: pointer;
 }
+/* Estilos responsive para pantallas menores a 700px */
+@media (max-width: 700px) {
+    .menu-toggle {
+        display: block;
 
-/* Hero section */
-/*
-    Estilos para la sección Hero.
-*/
+    }
+    .nav-list.show {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 80px; /* Altura del header */
+        left: 15px;
+        width: calc(100% - 30px); /* Ajustar ancho para evitar que se salga de la pantalla */
+        background-color: rgba(10, 25, 47, 0.652);
+        backdrop-filter: blur(5px);
+        z-index: 1000;
+    }
+ 
+        .nav-list a {
+            margin: 10px 0;
+            width: 100%;
+            text-align: right; /* Alineación a la derecha */
+        }
+    }
+/* Estilos para la sección Hero */
 .hero {
     height: 100vh;
     display: flex;
@@ -159,6 +165,7 @@ header img{
     padding-top: 80px;
 }
 
+/* Estilos para el título h1 de la sección Hero */
 .hero h1 {
     color: var(--primary-color);
     font-size: clamp(24px, 5vw, 32px);
@@ -166,26 +173,26 @@ header img{
     font-family: var(--font-mono);
 }
 
+/* Estilos para el título h2 de la sección Hero */
 .hero h2 {
     color: var(--heading-color);
     font-size: clamp(40px, 8vw, 80px);
     margin-bottom: 10px;
 }
 
+/* Estilos para el párrafo de la sección Hero */
 .hero p {
     max-width: 540px;
     margin-bottom: 30px;
     font-size: 20px;
 }
 
-/* Sections comunes */
-/*
-    Estilos comunes para las secciones.
-*/
+/* Estilos comunes para las secciones */
 .section {
     padding: 100px 0;
 }
 
+/* Estilos para los títulos de sección */
 .section-title {
     color: var(--heading-color);
     font-size: 32px;
@@ -195,8 +202,8 @@ header img{
     border-bottom: 1px solid #64ffda; 
 }
 
+/* Estilos para la línea debajo de los títulos de sección */
 .section-title::after {
-    /*content: '';*/
     display: block;
     width: 300px;
     height: 1px;
@@ -205,27 +212,26 @@ header img{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    
 }
 
-/* About section */
-/*
-    Estilos para la sección "Sobre mí".
-*/
+/* Estilos para la sección "Sobre mí" */
 .about-content {
     display: flex;
     gap: 50px;
     align-items: center;
 }
 
+/* Estilos para el texto de la sección "Sobre mí" */
 .about-text {
     flex: 1;
 }
 
+/* Estilos para los párrafos de la sección "Sobre mí" */
 .about-text p {
     margin-bottom: 20px;
 }
 
+/* Estilos para la lista de habilidades */
 .skills-list {
     display: grid;
     grid-template-columns: repeat(2, minmax(140px, 200px));
@@ -234,6 +240,7 @@ header img{
     margin-top: 20px;
 }
 
+/* Estilos para los elementos de lista de habilidades */
 .skills-list li {
     position: relative;
     padding-left: 20px;
@@ -241,6 +248,7 @@ header img{
     font-size: 14px;
 }
 
+/* Estilos para el marcador de lista de habilidades */
 .skills-list li::before {
     content: '▹';
     position: absolute;
@@ -248,11 +256,13 @@ header img{
     color: var(--primary-color);
 }
 
+/* Estilos para la imagen de la sección "Sobre mí" */
 .about-image {
     flex: 1;
     max-width: 300px;
 }
 
+/* Estilos para la imagen de perfil */
 .profile-img {
     width: 100%;
     border-radius: 5px;
@@ -260,28 +270,29 @@ header img{
     transition: all 0.3s ease;
 }
 
+/* Estilos para la imagen de perfil al pasar el cursor */
 .profile-img:hover {
     filter: none;
 }
 
-/* Experience section */
-/*
-    Estilos para la sección "Experiencia".
-*/
+/* Estilos para la sección "Experiencia" */
 .experience-timeline {
     margin-top: 50px;
 }
 
+/* Estilos para los elementos de la línea de tiempo de experiencia */
 .timeline-item {
     margin-bottom: 30px;
 }
 
+/* Estilos para los títulos h3 de la línea de tiempo de experiencia */
 .timeline-item h3 {
     color: var(--heading-color);
     font-size: 22px;
     margin-bottom: 5px;
 }
 
+/* Estilos para los títulos h4 de la línea de tiempo de experiencia */
 .timeline-item h4 {
     color: var(--primary-color);
     font-family: var(--font-mono);
@@ -289,6 +300,7 @@ header img{
     margin-bottom: 10px;
 }
 
+/* Estilos para las fechas de la línea de tiempo de experiencia */
 .date {
     display: block;
     font-family: var(--font-mono);
@@ -297,16 +309,14 @@ header img{
     color: var(--text-color);
 }
 
-/* Work section */
-/*
-    Estilos para la sección "Trabajos".
-*/
+/* Estilos para la sección "Trabajos" */
 .projects-columns {
     display: flex;
     gap: 30px;
     margin-top: 50px;
 }
 
+/* Estilos para las columnas de proyectos */
 .project-column {
     flex: 1;
     display: flex;
@@ -314,6 +324,7 @@ header img{
     gap: 30px;
 }
 
+/* Estilos para las tarjetas de proyectos */
 .project-card {
     background-color: var(--dark-color);
     border-radius: 5px;
@@ -321,16 +332,19 @@ header img{
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Estilos para las tarjetas de proyectos al pasar el cursor */
 .project-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* Estilos para las imágenes de los proyectos */
 .project-image {
     height: 200px;
     overflow: hidden;
 }
 
+/* Estilos para las imágenes dentro de las tarjetas de proyectos */
 .project-image img {
     width: 100%;
     height: 100%;
@@ -338,68 +352,71 @@ header img{
     transition: transform 0.5s ease;
 }
 
+/* Estilos para las imágenes de proyectos al pasar el cursor */
 .project-card:hover .project-image img {
     transform: scale(1.1);
 }
 
+/* Estilos para la información del proyecto */
 .project-info {
     padding: 20px;
     display: inline;
 }
 
+/* Estilos para los títulos h3 de la información del proyecto */
 .project-info h3 {
     color: var(--heading-color);
     margin-bottom: 10px;
     font-size: 20px;
 }
 
+/* Estilos para los párrafos de la información del proyecto */
 .project-info p {
     margin-bottom: 15px;
     font-size: 16px;
 }
 
+/* Estilos para los enlaces de los proyectos */
 .project-links {
     display: flex;
     gap: 15px;
 }
 
+/* Estilos para los enlaces de los proyectos */
 .project-links a {
     color: var(--light-color);
     font-size: 20px;
     transition: all 0.3s ease;
 }
 
+/* Estilos para los enlaces de los proyectos al pasar el cursor */
 .project-links a:hover {
     color: var(--primary-color);
     transform: translateY(-3px);
 }
 
-/* Responsive para las columnas */
+/* Estilos responsive para pantallas menores a 768px */
 @media (max-width: 768px) {
     .projects-columns {
         flex-direction: column;
     }
-    
     .project-column {
         gap: 20px;
     }
 }
 
-/*/////////////////*/
-
-/* Contact section */
-/*
-    Estilos para la sección "Contacto".
-*/
+/* Estilos para la sección "Contacto" */
 .contact {
     text-align: center;
 }
 
+/* Estilos para los párrafos de la sección "Contacto" */
 .contact p {
     max-width: 600px;
     margin: 0 auto 30px;
 }
 
+/* Estilos para los enlaces sociales */
 .social-links {
     margin-top: 50px;
     display: flex;
@@ -407,21 +424,20 @@ header img{
     gap: 20px;
 }
 
+/* Estilos para los enlaces sociales */
 .social-links a {
     color: var(--light-color);
     font-size: 24px;
     transition: all 0.3s ease;
 }
 
+/* Estilos para los enlaces sociales al pasar el cursor */
 .social-links a:hover {
     color: var(--primary-color);
     transform: translateY(-5px);
 }
 
-/* Footer */
-/*
-    Estilos para el pie de página.
-*/
+/* Estilos para el pie de página */
 .footer {
     text-align: center;
     padding: 20px 0;
@@ -429,13 +445,20 @@ header img{
     font-size: 14px;
 }
 
-/* Responsive */
-/*
-    Estilos para la adaptación a diferentes tamaños de pantalla.
-*/
+/* Estilos responsive para pantallas menores a 700px */
 @media (max-width: 700px) {
     .nav-list {
         display: none;
+    }
+    .nav-list.show {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 80px; /* Altura del header */
+        left: 15px;
+        width: 100%;
+        background-color: rgba(10, 25, 47, 0.9);
+        z-index: 1000;
     }
 
     .menu-toggle {
@@ -458,6 +481,7 @@ header img{
     }
 }
 
+/* Estilos responsive para pantallas menores a 480px */
 @media (max-width: 480px) {
     .hero h2 {
         font-size: 40px;
@@ -480,19 +504,14 @@ header img{
     }   
 }
 
+/* Estilos responsive para pantallas menores a 400px */
 @media(max-width: 400px) {
-   
     body {
         margin: 0px;
         padding: 10px;
     }
-   
-
 }
-/* Efecto de cursor personalizado */
-/*
-    Estilos para el efecto de cursor personalizado.
-*/
+/* Estilos para el efecto de cursor personalizado */
 .cursor {
     position: fixed;
     width: 20px;
@@ -502,49 +521,38 @@ header img{
     pointer-events: none;
     transform: translate(-50%, -50%);
     z-index: 9999;
-    transition: 
-        transform 0.15s ease,
-        width 0.2s ease,
-        height 0.2s ease;
+    transition: transform 0.15s ease, width 0.2s ease, height 0.2s ease;
     mix-blend-mode: difference;
 }
 
+/* Estilos para el efecto de cursor personalizado */
 .cursor-follower {
     position: fixed;
     width: 40px;
     height: 40px;
-    background-color:var(--primary-color);
+    background-color: var(--primary-color);
     border-radius: 50%;
     pointer-events: none;
     transform: translate(-50%, -50%);
     z-index: 9998;
-    transition: 
-        transform 0.3s ease,
-        width 0.3s ease,
-        height 0.3s ease,
-        background-color 0.3s ease;
+    transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
     mix-blend-mode: difference;
 }
 
-/* Estados interactivos */
-/*
-    Estilos para los estados interactivos del cursor.
-*/
+/* Estilos para los estados interactivos del cursor */
 .hover-cursor-effect {
     transform: translate(-50%, -50%) scale(1.5);
     background-color: var(--primary-color);
     border: none;
 }
 
+/* Estilos para los estados interactivos del cursor */
 .hover-cursor-effect-follower {
     transform: translate(-50%, -50%) scale(0.5);
     background-color: rgba(100, 255, 218, 0.8);
 }
 
-/* Ocultar cursor nativo */
-/*
-    Oculta el cursor nativo del navegador.
-*/
+/* Ocultar cursor nativo del navegador */
 html.has-custom-cursor,
 html.has-custom-cursor * {
     cursor: none !important;
