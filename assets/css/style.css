@@ -27,6 +27,7 @@ body {
     background-color: var(--secondary-color);
     color: var(--text-color);
     line-height: 1.6;
+    padding: 0;
 }
 /* Estilos para el contenedor principal */
 .container {
