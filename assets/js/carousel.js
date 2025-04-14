@@ -26,21 +26,21 @@ document.addEventListener('DOMContentLoaded', function() {
         // Mostrar el slide actual
         slides[currentIndex].style.display = 'block';
         slides[currentIndex].style.opacity = '1';
-        slides[currentIndex].style.transform = 'translateX(0)';
+        slides[currentIndex].style.transform = 'translateX(0)scale(0.9)';
         slides[currentIndex].style.zIndex = '2';
         
         // Mostrar el slide anterior (si existe)
         const prevIndex = (currentIndex - 1 + totalSlides) % totalSlides;
         slides[prevIndex].style.display = 'block';
         slides[prevIndex].style.opacity = '0.6';
-        slides[prevIndex].style.transform = 'translateX(-80%) scale(0.8)';
+        slides[prevIndex].style.transform = 'translateX(-80%) scale(0.6)';
         slides[prevIndex].style.zIndex = '1';
         
         // Mostrar el siguiente slide (si existe)
         const nextIndex = (currentIndex + 1) % totalSlides;
         slides[nextIndex].style.display = 'block';
         slides[nextIndex].style.opacity = '0.6';
-        slides[nextIndex].style.transform = 'translateX(80%) scale(0.8)';
+        slides[nextIndex].style.transform = 'translateX(80%) scale(0.6)';
         slides[nextIndex].style.zIndex = '1';
     }
     
