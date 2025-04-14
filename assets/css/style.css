@@ -444,6 +444,7 @@ header img {
     padding: 20px 0;
     font-family: var(--font-mono);
     font-size: 14px;
+    background: linear-gradient(to right,#000000, #02135d, #000000);
 }
 
 /* Estilos responsive para pantallas menores a 700px */
