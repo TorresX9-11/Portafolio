@@ -18,6 +18,7 @@ Mi portafolio incluye una variedad de proyectos, algunos de los cuales se muestr
 ## Links visualizacion del proyecto
 
 DEMO DEL PROYECTO: https://teclab.uct.cl/~emanuel.torres/
+semana 6 se encuentra mi portafolio desplegado.
 
 ## Contacto
 Puedes contactarme a través de:
