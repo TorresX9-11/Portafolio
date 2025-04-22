@@ -3,7 +3,7 @@
     Contiene las variables de color, la tipografía y los estilos generales de la página web.
 */
 
-/* Variables de color y tipografía */
+/* Variables de color y tipografía. Se usan variables CSS para facilitar el mantenimiento y la consistencia.*/
 :root {
     --primary-color: #64ffda;
     --secondary-color: #0a192f;
@@ -12,7 +12,7 @@
     --text-color: #8892b0;
     --heading-color: #e6f1ff;
     --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
-    --font-sans: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', sans-serif;
+    --font-sans: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', helvetica, sans-serif;
 }
 
 /* Reset y estilos base - Resetear estilos por defecto del navegador */

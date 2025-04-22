@@ -1,16 +1,20 @@
 // carousel.js
+
+// Este archivo contiene el código JavaScript para el carrusel 3D.  Se utiliza un enfoque basado en eventos para manejar la navegación entre slides.
+
 document.addEventListener('DOMContentLoaded', function() {
+    // Obtener elementos del DOM
     const carousel = document.querySelector('.carousel-3d');
     const slides = document.querySelectorAll('.carousel-slide');
     const prevBtn = document.querySelector('.carousel-control.prev');
     const nextBtn = document.querySelector('.carousel-control.next');
     
-    let currentIndex = 0;
-    const totalSlides = slides.length;
+    let currentIndex = 0; // Índice del slide actual
+    const totalSlides = slides.length; // Número total de slides
     
     // Inicializar el carrusel
     function initCarousel() {
-        updateCarousel();
+        updateCarousel(); // Actualizar la vista del carrusel
     }
     
     // Actualizar la posición del carrusel
@@ -47,28 +51,28 @@ document.addEventListener('DOMContentLoaded', function() {
     // Ir al slide anterior
     function goToPrev() {
         currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-        updateCarousel();
+        updateCarousel(); // Actualizar la vista del carrusel
     }
     
     // Ir al siguiente slide
     function goToNext() {
         currentIndex = (currentIndex + 1) % totalSlides;
-        updateCarousel();
+        updateCarousel(); // Actualizar la vista del carrusel
     }
     
     // Event listeners para los botones
-    prevBtn.addEventListener('click', goToPrev);
-    nextBtn.addEventListener('click', goToNext);
+    prevBtn.addEventListener('click', goToPrev); // Agregar listener al botón anterior
+    nextBtn.addEventListener('click', goToNext); // Agregar listener al botón siguiente
     
     // Inicializar el carrusel al cargar la página
-    initCarousel();
+    initCarousel(); // Inicializar el carrusel
     
     // Opcional: Navegación con teclado
     document.addEventListener('keydown', function(e) {
         if (e.key === 'ArrowLeft') {
-            goToPrev();
+            goToPrev(); // Ir al slide anterior con la flecha izquierda
         } else if (e.key === 'ArrowRight') {
-            goToNext();
+            goToNext(); // Ir al siguiente slide con la flecha derecha
         }
     });
 });

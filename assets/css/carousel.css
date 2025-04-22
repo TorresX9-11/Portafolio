@@ -1,6 +1,7 @@
-/* Carrusel 3D */
+/* Carrusel 3D. Estilos para un carrusel 3D de proyectos.*/
 
 .carousel-3d-container {
+    /* Contenedor principal del carrusel */
     position: relative;
     width: 100%;
     max-width: 1200px;
@@ -8,22 +9,24 @@
     padding: 2rem 0;
     overflow: hidden;
     box-sizing: border-box;
-    background: linear-gradient(to right,#000000, #02135d, #000000);
+    background: linear-gradient(to right,#000000, #02135d, #000000); /* Gradiente de fondo */
 }
 
 .carousel-3d {
+    /* Elemento principal del carrusel 3D */
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 400px;
     width: 100%;
-    perspective: 1000px;
+    perspective: 1000px; /* Perspectiva 3D */
     margin: 0;
     padding: 0;
 }
 
 .carousel-slide {
+    /* Cada slide del carrusel */
     position: absolute;
     width: 100%;
     max-width: 500px;
@@ -32,44 +35,47 @@
     left: 0;
     top: 0;
     align-content: center;
-    transform: translateX(-50%);
-    transition: all 0.5s ease;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: translateX(-50%); /* Centrar horizontalmente */
+    transition: all 0.5s ease; /* Transición suave */
+    background: white; /* Fondo blanco para cada slide */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra sutil */
     overflow: visible;
     box-sizing: border-box;
 }
 
 
 .project-card {
+    /* Estilos para la tarjeta del proyecto */
     position: absolute;
     width: 100%;
     height: 100%px;
     right: auto;
     left: auto;
     top: auto;
-    transform: translate(-50%, -50%);
-    background-color: var(--dark-color);
-    border-radius: 10px;
+    transform: translate(-50%, -50%); /* Centrar */
+    background-color: var(--dark-color); /* Color de fondo oscuro */
+    border-radius: 10px; /* Bordes redondeados */
     overflow: hidden;
-    transition: all 0.5s ease;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.5s ease; /* Transición suave */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Sombra */
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Dirección vertical */
 }
 
 .project-image img {
+    /* Estilos para la imagen del proyecto */
     width: 100%;
     height: 200px;
     overflow: hidden;
     max-height: 400px;
-    object-fit: cover;
-    transition: transform 0.5s ease;
+    object-fit: cover; /* Ajustar la imagen para que cubra todo el contenedor */
+    transition: transform 0.5s ease; /* Transición suave */
 }
 
 .project-card:hover .project-image img {
-    transform: scale(1.1);
+    /* Efecto al pasar el ratón sobre la tarjeta */
+    transform: scale(1.1); /* Aumentar el tamaño ligeramente */
 }
 
 .project-info {
@@ -110,27 +116,29 @@
 
 /* Controles del carrusel */
 .carousel-control {
+    /* Estilos para los botones de control */
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(10, 25, 47, 0.7);
+    background: rgba(10, 25, 47, 0.7); /* Fondo oscuro semitransparente */
     border: none;
-    color: var(--primary-color);
+    color: var(--primary-color); /* Color del texto */
     width: 40px;
     height: 40px;
-    border-radius: 50%;
+    border-radius: 50%; /* Botones redondos */
     font-size: 20px;
     cursor: pointer;
-    z-index: 1000;
+    z-index: 1000; /* Asegurar que estén encima de otros elementos */
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease; /* Transición suave */
 }
 
 .carousel-control:hover {
-    background: var(--primary-color);
-    color: var(--secondary-color);
+    /* Efecto al pasar el ratón sobre los botones */
+    background: var(--primary-color); /* Color principal */
+    color: var(--secondary-color); /* Color de texto oscuro */
 }
 
 .carousel-control.prev {
